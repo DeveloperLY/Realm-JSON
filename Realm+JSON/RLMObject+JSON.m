@@ -138,7 +138,7 @@ static NSInteger const kCreateBatchSize = 100;
 	return primaryKeyValue;
 }
 
-- (void)performInTransaction:(void (^)())transaction {
+- (void)performInTransaction:(void (^)(void))transaction {
 	NSAssert(transaction != nil, @"No transaction block provided");
 	if (self.realm) {
 		[self.realm transactionWithBlock:transaction];
@@ -163,7 +163,10 @@ static NSInteger const kCreateBatchSize = 100;
     NSDictionary *dictionary;
     SEL preprocessingSel = NSSelectorFromString(@"preprocessedJSON:");
     if ([self respondsToSelector:preprocessingSel]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         dictionary = [self performSelector:preprocessingSel withObject:origDict];
+#pragma clang diagnostic pop
     } else {
         dictionary = origDict;
     }

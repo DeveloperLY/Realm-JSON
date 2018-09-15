@@ -1,8 +1,8 @@
 Realm+JSON ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 ==========
 
-[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/Realm+JSON/badge.png)](https://github.com/matthewcheok/Realm-JSON)
-[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/Realm+JSON/badge.svg)](https://github.com/matthewcheok/Realm-JSON)
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/Realm+JSON/badge.png)](https://github.com/DeveloperLY/Realm-JSON)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/Realm+JSON/badge.svg)](https://github.com/DeveloperLY/Realm-JSON)
 
 A concise [Mantle](https://github.com/Mantle/Mantle)-like way of working with [Realm](https://github.com/realm/realm-cocoa) and JSON.
 
@@ -18,7 +18,7 @@ A concise [Mantle](https://github.com/Mantle/Mantle)-like way of working with [R
 
 Add the following to your [CocoaPods](http://cocoapods.org/) Podfile
 
-    pod 'Realm+JSON', '~> 0.2'
+    pod 'Realm+JSON', :git => 'https://github.com/DeveloperLY/Realm-JSON.git'
 
 or clone as a git submodule,
 
